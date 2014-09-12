@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Calculator</title>
+		<meta name="description" content="Natural Language Form with custom text input and drop-down lists" />
+		<meta name="keywords" content="Natural Language UI, sentence form, text input, contenteditable, html5, css3, jquery" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/calculator.js"></script>
+	</head>
+	<body class="nl-blurred">
+		<div class="container demo-1">
+			<!-- Top Navigation -->
+			<div class="main clearfix">
+
+				<form id="nl-form" class="nl-form">
+						I'm going to sell
+					<select>
+						<option value="1" selected>this type of </option>
+						<option value="2">Organic & high quality</option>
+						<option value="3">Low price & quality</option>
+					</select>
+     				shirts, and the monthly quantity it will be
+					<input type="text" value="" placeholder="X " data-subline="For example: <em> 1 </em> or <em> 1,000 </em>"/> units. At at a price of $ <input type="text" value="" placeholder="this " data-subline="Oraginc base price: <em>$23</em>, Regular base price: <em>$13</em>"/> dollars each one.
+					<div class="nl-submit-wrap">
+						<div id="form_button" class="nl-submit"  type="submit">And I will make</div>
+					</div>
+					<div class="nl-overlay"></div>
+				</form>
+			</div>
+
+			<div id="breakdown" class="main clearfix">
+				<h3>Breakdown</h3>
+				<table class="first-table">
+ 					<tr>
+						<td class="line">
+						 <a id="strategy"></a> shirts base price
+						</td>
+						<td>
+							+$<a id="base-price"></a>
+						</td>
+					</tr>
+					<tr>
+						<td class="line">
+							Your royalty per shirt
+						</td>
+						<td>
+							+ $<a id="royalty"></a>
+						</td>
+					</tr>
+					<tr>
+						<td class="line">
+							Service fee per shirt
+						</td>
+						<td id="equal">
+							+ $<a id="service"></a>
+						</td>
+					</tr>
+					<tr>
+						<td class="line">
+							Price per shirt (shipping included)
+						</td>
+						<td>
+							= $<a id="price"></a>
+						</td>
+					</tr>
+				</table>
+
+				<div>
+				<table class="second-table">
+					<tr>
+						<td>
+							<a id="qty"></a>
+						</td>
+						<td>
+							X
+						</td>
+						<td>
+							$<a id="royalty-2"></a>
+						</td>
+						<td id="eq">
+							=
+						</td>
+						<td>
+							<strong>$<a id="income"></a></strong>
+						</td>
+					</tr>
+					<tr>
+						<td class="">
+							Monthly <br> quantity
+						</td>
+						<td></td>
+						<td>
+							Your Royalty <br> per shirt
+						</td>
+						<td></td>
+						<td>
+							<strong>Your net profit</strong>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div><!-- /container -->
+
+		<footer class="main clearfix">
+			<i>by sebabelmar.com</i>
+		</footer>
+		<script src="js/nlform.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+	</body>
+</html>
